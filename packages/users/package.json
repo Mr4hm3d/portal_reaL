@@ -5,8 +5,8 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "@portal/auth": "workspace:*",
-    "@portal/core-domain": "workspace:*",
+    "@portal/auth": "file:../auth",
+    "@portal/core-domain": "file:../core-domain",
     "zod": "^3.23.8"
   }
 }

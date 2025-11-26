@@ -5,9 +5,9 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "@portal/core-domain": "workspace:*",
-    "@portal/config": "workspace:*",
-    "@portal/email": "workspace:*",
+    "@portal/core-domain": "file:../core-domain",
+    "@portal/config": "file:../config",
+    "@portal/email": "file:../email",
     "bcryptjs": "^2.4.3",
     "jose": "^5.9.4",
     "zod": "^3.23.8"

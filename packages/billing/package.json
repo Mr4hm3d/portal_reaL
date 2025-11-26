@@ -5,11 +5,11 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "@portal/config": "workspace:*",
-    "@portal/core-domain": "workspace:*",
-    "@portal/email": "workspace:*",
-    "@portal/integrations-billingo": "workspace:*",
-    "@portal/payments-barion": "workspace:*",
+    "@portal/config": "file:../config",
+    "@portal/core-domain": "file:../core-domain",
+    "@portal/email": "file:../email",
+    "@portal/integrations-billingo": "file:../integrations-billingo",
+    "@portal/payments-barion": "file:../payments-barion",
     "pdfkit": "^0.15.0"
   },
   "devDependencies": {

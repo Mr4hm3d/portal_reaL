@@ -5,7 +5,7 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "@portal/config": "workspace:*",
+    "@portal/config": "file:../config",
     "nodemailer": "^6.9.11"
   }
 }

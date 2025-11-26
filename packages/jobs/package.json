@@ -4,8 +4,8 @@
   "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {
-    "@portal/config": "workspace:*",
-    "@portal/email": "workspace:*",
+    "@portal/config": "file:../config",
+    "@portal/email": "file:../email",
     "bullmq": "^4.14.2"
   }
 }

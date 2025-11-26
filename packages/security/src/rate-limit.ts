@@ -4,10 +4,35 @@ import { parseEnv } from '@portal/config/index';
 
 const env = parseEnv();
 
-const redis = new Redis(env.REDIS_URL, {
-  maxRetriesPerRequest: 1,
-  enableOfflineQueue: false
-});
+let redis: Redis | null = null;
+let redisReady = false;
+
+try {
+  redis = new Redis(env.REDIS_URL, {
+    maxRetriesPerRequest: 1,
+    enableOfflineQueue: false,
+    lazyConnect: true
+  });
+
+  redis.on('ready', () => {
+    redisReady = true;
+  });
+  redis.on('end', () => {
+    redisReady = false;
+  });
+  redis.on('error', (error) => {
+    redisReady = false;
+    console.warn('Rate limit Redis connection error, using in-memory fallback', error);
+  });
+
+  redis.connect().catch((error) => {
+    redisReady = false;
+    console.warn('Rate limit Redis unavailable, using in-memory fallback', error);
+  });
+} catch (error) {
+  console.warn('Rate limit Redis initialization failed, using in-memory fallback', error);
+  redis = null;
+}
 
 export type RateLimitConfig = {
   windowMs: number;
@@ -23,6 +48,9 @@ export type RateLimitResult = {
   resetIn: number;
 };
 
+type MemoryEntry = { count: number; expiresAt: number };
+const memoryStore = new Map<string, MemoryEntry>();
+
 export const defaultRateLimitConfig: RateLimitConfig = {
   windowMs: env.RATE_LIMIT_WINDOW_MS ?? 60_000,
   max: env.RATE_LIMIT_MAX_REQUESTS ?? 15,
@@ -34,8 +62,40 @@ function getRedisKey(key: string, config: RateLimitConfig) {
   return `${config.prefix ?? 'rl'}:${key}:${window}`;
 }
 
+function inMemoryEnforce(key: string, config: RateLimitConfig): RateLimitResult {
+  const now = Date.now();
+  const currentWindowExpires = now - (now % config.windowMs) + config.windowMs;
+  const existing = memoryStore.get(key);
+
+  if (!existing || existing.expiresAt <= now) {
+    memoryStore.set(key, { count: 1, expiresAt: currentWindowExpires });
+    return {
+      allowed: true,
+      count: 1,
+      limit: config.max,
+      remaining: config.max - 1,
+      resetIn: currentWindowExpires - now
+    };
+  }
+
+  const nextCount = existing.count + 1;
+  memoryStore.set(key, { count: nextCount, expiresAt: existing.expiresAt });
+
+  return {
+    allowed: nextCount <= config.max,
+    count: nextCount,
+    limit: config.max,
+    remaining: Math.max(config.max - nextCount, 0),
+    resetIn: existing.expiresAt - now
+  };
+}
+
 export async function enforceRateLimit(key: string, config: RateLimitConfig = defaultRateLimitConfig): Promise<RateLimitResult> {
   const redisKey = getRedisKey(key, config);
+
+  if (!redis || !redisReady) {
+    return inMemoryEnforce(redisKey, config);
+  }
 
   try {
     const count = await redis.incr(redisKey);
@@ -54,14 +114,9 @@ export async function enforceRateLimit(key: string, config: RateLimitConfig = de
       resetIn
     };
   } catch (error) {
-    console.warn('Rate limit skipped due to Redis error', error);
-    return {
-      allowed: true,
-      count: 0,
-      limit: config.max,
-      remaining: config.max,
-      resetIn: config.windowMs
-    };
+    redisReady = false;
+    console.warn('Rate limit skipped due to Redis error, using in-memory fallback', error);
+    return inMemoryEnforce(redisKey, config);
   }
 }
 

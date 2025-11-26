@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
 import { getCurrentUser } from '@portal/auth';
 
 export async function MainNav({ locale }: { locale: string }) {
   const user = await getCurrentUser();
-  const t = useTranslations('navigation');
+  const t = await getTranslations('navigation');
 
   if (!user) {
     return null;

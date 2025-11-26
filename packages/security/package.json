@@ -4,11 +4,15 @@
   "private": true,
   "main": "src/index.ts",
   "license": "MIT",
+  "scripts": {
+    "test": "vitest run"
+  },
   "dependencies": {
     "ioredis": "^5.4.1",
     "@portal/config": "file:../config"
   },
   "devDependencies": {
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "vitest": "^2.0.5"
   }
 }

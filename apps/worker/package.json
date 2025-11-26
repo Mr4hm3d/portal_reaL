@@ -1,0 +1,21 @@
+{
+  "name": "client-portal-worker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "ts-node-dev src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "bullmq": "^5.8.0",
+    "ioredis": "^5.4.1",
+    "@config/env": "workspace:*",
+    "@email": "workspace:*",
+    "@jobs": "workspace:*"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  }
+}

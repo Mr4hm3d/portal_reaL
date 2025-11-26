@@ -1,0 +1,10 @@
+{
+  "name": "@config/env",
+  "version": "0.1.0",
+  "main": "src/index.ts",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "zod": "^3.23.8"
+  }
+}

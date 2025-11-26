@@ -1,0 +1,383 @@
+{
+  "home": {
+    "tagline": "Ügyfélportál MVP",
+    "title": "Fehér címkés ügyfélportál",
+    "description": "Ez a Next.js alapú portál i18n támogatással, moduláris felépítéssel és magyar nyelvi alapbeállítással készül.",
+    "ctaDashboard": "Ugrás a vezérlőpultra",
+    "ctaLogin": "Bejelentkezés"
+  },
+  "dashboard": {
+    "title": "Vezérlőpult",
+    "description": "Itt jelennek meg a szolgáltatások, támogatási jegyek és számlázási feladatok összefoglalói.",
+    "welcome": "Üdv, {name}!",
+    "nextSteps": "Következő lépések",
+    "todoTickets": "Nyiss vagy válaszolj támogatási jegyekre.",
+    "todoServices": "Ellenőrizd a hozzárendelt szolgáltatásokat.",
+    "todoBilling": "Tekintsd át a díjbekérőket és kifizetéseket.",
+    "account": "Fiókod",
+    "nameLabel": "Név",
+    "emailLabel": "Email",
+    "rolesLabel": "Szerepkörök"
+  },
+  "navigation": {
+    "dashboard": "Vezérlőpult",
+    "tickets": "Jegyek",
+    "services": "Szolgáltatások",
+    "wiki": "Tudásbázis",
+    "billing": "Számlázás",
+    "files": "Fájlok",
+    "users": "Felhasználók",
+    "account": "Fiók"
+  },
+  "account": {
+    "title": "Fiókbeállítások",
+    "subtitle": "Kezeld a profil adataidat és a biztonságot.",
+    "profileHeading": "Profil",
+    "profileDescription": "Frissítsd a megjelenített neved és a preferált nyelvet.",
+    "emailLabel": "E-mail",
+    "nameLabel": "Név",
+    "languageLabel": "Preferált nyelv",
+    "languageHu": "Magyar",
+    "languageEn": "Angol",
+    "saveProfile": "Profil mentése",
+    "profileSuccess": "Sikeresen frissítetted a profilodat.",
+    "profileError": "Nem sikerült frissíteni a profilodat.",
+    "passwordHeading": "Biztonság",
+    "passwordDescription": "Változtasd meg a jelszavad a nagyobb biztonságért.",
+    "currentPassword": "Jelenlegi jelszó",
+    "newPassword": "Új jelszó",
+    "savePassword": "Jelszó frissítése",
+    "passwordSuccess": "Sikeresen frissítetted a jelszavad.",
+    "passwordError": "Nem sikerült frissíteni a jelszavad.",
+    "unknownError": "Váratlan hiba"
+  },
+  "adminUsers": {
+    "title": "Felhasználókezelés",
+    "intro": "Hozzon létre és kezeljen portál fiókokat.",
+    "backToDashboard": "Vissza a vezérlőpultra",
+    "listTitle": "Meglévő felhasználók",
+    "listSubtitle": "Jelenleg regisztrált fiókok.",
+    "table": {
+      "name": "Név",
+      "email": "E-mail",
+      "roles": "Szerepkörök",
+      "language": "Nyelv",
+      "created": "Létrehozva"
+    },
+    "empty": "Még nincs felhasználó.",
+    "createTitle": "Új felhasználó",
+    "createSubtitle": "Adjon hozzá új fiókot a megfelelő szerepkörökkel.",
+    "fields": {
+      "name": "Név",
+      "email": "E-mail",
+      "password": "Jelszó",
+      "language": "Preferált nyelv",
+      "roles": "Szerepkörök"
+    },
+    "languages": {
+      "hu": "Magyar",
+      "en": "Angol"
+    },
+    "roles": {
+      "ADMIN": "Admin",
+      "SUPPORT": "Ügyfélszolgálat",
+      "BILLING": "Számlázás",
+      "CLIENT": "Ügyfél"
+    },
+    "roleHint": "Válasszon egy vagy több szerepkört.",
+    "creating": "Létrehozás...",
+    "createCta": "Felhasználó létrehozása",
+    "createSuccess": "A felhasználó elkészült.",
+    "errorGeneric": "A felhasználó létrehozása nem sikerült."
+  },
+  "files": {
+    "title": "Fájlok",
+    "intro": "Tölts fel és érd el a jegyekhez vagy szolgáltatásokhoz kapcsolt fájlokat.",
+    "empty": "Még nincs fájl.",
+    "table": {
+      "filename": "Fájlnév",
+      "visibility": "Láthatóság",
+      "links": "Hivatkozások",
+      "size": "Méret",
+      "created": "Feltöltve",
+      "actions": "Műveletek",
+      "download": "Letöltés",
+      "ticketLink": "Jegy megnyitása",
+      "serviceLink": "Szolgáltatás megnyitása"
+    },
+    "visibility": {
+      "PUBLIC": "Nyilvános",
+      "CLIENT_ONLY": "Ügyfelek",
+      "INTERNAL": "Belső",
+      "PRIVATE": "Privát"
+    },
+    "form": {
+      "file": "Fájl",
+      "ticket": "Jegy (opcionális)",
+      "service": "Szolgáltatás (opcionális)",
+      "noTicket": "Nincs jegy",
+      "noService": "Nincs szolgáltatás",
+      "ticketHint": "Kapcsold a feltöltést egy támogatási jegyhez, ha releváns.",
+      "serviceHint": "Kapcsold a feltöltést egy szolgáltatáshoz, ha releváns.",
+      "visibility": "Láthatóság",
+      "visibilityHint": "Válaszd ki, ki férhet hozzá a fájlhoz.",
+      "submit": "Feltöltés",
+      "submitting": "Feltöltés folyamatban..."
+    },
+    "errors": {
+      "missingFile": "Válassz ki egy feltöltendő fájlt.",
+      "generic": "A feltöltés nem sikerült. Próbáld újra."
+    }
+  },
+  "tickets": {
+    "title": "Támogatási jegyek",
+    "intro": "Kövesse és egyeztesse a bejelentéseket.",
+    "newTicket": "Új jegy",
+    "empty": "Még nincs jegy.",
+    "table": {
+      "title": "Cím",
+      "status": "Állapot",
+      "priority": "Prioritás",
+      "service": "Szolgáltatás",
+      "noService": "Nincs hozzárendelve",
+      "updated": "Frissítve"
+    },
+    "newTitle": "Új jegy létrehozása",
+    "newIntro": "Írja le a problémát, és csapatunk válaszol.",
+    "form": {
+      "title": "Cím",
+      "description": "Leírás",
+      "priority": "Prioritás"
+    },
+    "submit": "Jegy beküldése",
+    "submitting": "Küldés...",
+    "errorGeneric": "Nem sikerült a művelet. Próbálja újra.",
+    "detailIntro": "Tekintse át a beszélgetést és válaszoljon.",
+    "messages": "Üzenetek",
+    "messagesEmpty": "Még nincs válasz.",
+    "assignedTo": "Felelős",
+    "replyForm": "Válasz küldése",
+    "replyLabel": "Üzenet",
+    "replyHint": "A válaszok a jegyhez hozzáférő felhasználók számára láthatók.",
+    "send": "Válasz elküldése",
+    "sending": "Küldés...",
+    "statuses": {
+      "OPEN": "Nyitott",
+      "PENDING": "Függőben",
+      "IN_PROGRESS": "Folyamatban",
+      "RESOLVED": "Megoldva",
+      "CLOSED": "Lezárt"
+    },
+    "manage": {
+      "title": "Jegy kezelése",
+      "help": "Csak a munkatársak módosíthatják az állapotot vagy a felelőst.",
+      "status": "Állapot",
+      "assignee": "Felelős",
+      "unassigned": "Nincs kijelölve",
+      "save": "Változtatások mentése"
+    },
+    "filters": {
+      "status": "Állapot",
+      "service": "Szolgáltatás",
+      "priority": "Prioritás",
+      "all": "Összes",
+      "apply": "Szűrők alkalmazása",
+      "clear": "Szűrők törlése"
+    },
+    "priorities": {
+      "0": "Legalacsonyabb",
+      "1": "Alacsony",
+      "2": "Normál",
+      "3": "Magas",
+      "4": "Sürgős",
+      "5": "Kritikus"
+    }
+  },
+  "services": {
+    "title": "Szolgáltatások",
+    "intro": "Aktív szolgáltatások és ügyfélhozzárendelések.",
+    "empty": "Nincs elérhető szolgáltatás.",
+    "templates": "Szolgáltatás sablonok",
+    "templateHint": "Újrafelhasználható definíciók ügyfél hozzárendelés nélkül.",
+    "templateEmpty": "Még nincs sablon létrehozva.",
+    "assignments": "Ügyfél szolgáltatások",
+    "assignmentHint": "Konkrét ügyfelekhez rendelt szolgáltatások.",
+    "assignedEmpty": "Még nincs hozzárendelt szolgáltatás.",
+    "assignedTo": "Hozzárendelve: {name}",
+    "form": {
+      "titleLabel": "Sablon létrehozása",
+      "descriptionLabel": "Állíts össze újrafelhasználható szolgáltatásokat árral és opcionális metadattal.",
+      "title": "Cím",
+      "description": "Leírás",
+      "type": "Típus",
+      "price": "Ár (HUF)",
+      "metadata": "Metadat (JSON, opcionális)",
+      "types": {
+        "MONTHLY": "Havi",
+        "ONE_TIME": "Egyszeri",
+        "CUSTOM": "Egyedi"
+      },
+      "invalidMetadata": "A metadatnak érvényes JSON-nak kell lennie.",
+      "error": "Nem sikerült létrehozni a sablont.",
+      "submitting": "Mentés...",
+      "submit": "Sablon mentése"
+    },
+    "assign": {
+      "title": "Sablon hozzárendelése ügyfélhez",
+      "description": "Sablon klónozása egy konkrét ügyfélhez.",
+      "template": "Sablon",
+      "client": "Ügyfél",
+      "noTemplates": "Nincs hozzárendelhető sablon",
+      "noClients": "Nincs elérhető ügyfél",
+      "missingSelection": "Válassz sablont és ügyfelet.",
+      "error": "Nem sikerült hozzárendelni a szolgáltatást.",
+      "submitting": "Hozzárendelés...",
+      "submit": "Szolgáltatás hozzárendelése"
+    }
+  },
+  "wiki": {
+    "title": "Tudásbázis",
+    "intro": "Böngésszen a szolgáltatásaihoz kapcsolódó útmutatókban és válaszokban.",
+    "empty": "Nem találhatók cikkek.",
+    "visibility": {
+      "PUBLIC": "Nyilvános",
+      "CLIENT_ONLY": "Ügyfelek",
+      "INTERNAL": "Belső"
+    },
+    "view": "Megnyitás",
+    "back": "Vissza a tudásbázishoz",
+    "form": {
+      "label": "Új cikk",
+      "title": "Új tudásbázis bejegyzés létrehozása",
+      "fields": {
+        "title": "Cím",
+        "service": "Szolgáltatás (nem kötelező)",
+        "content": "Tartalom",
+        "visibility": "Láthatóság",
+        "language": "Nyelv"
+      },
+      "placeholders": {
+        "service": "Nincs szolgáltatás"
+      },
+      "visibility": {
+        "PUBLIC": "Nyilvános",
+        "CLIENT_ONLY": "Ügyfelek",
+        "INTERNAL": "Belső"
+      },
+      "languages": {
+        "hu": "Magyar",
+        "en": "Angol"
+      },
+      "actions": {
+        "submit": "Cikk közzététele",
+        "submitting": "Közzététel..."
+      },
+      "success": "Sikeresen létrejött a cikk"
+    }
+  },
+  "billing": {
+    "title": "Díjbekérők",
+    "intro": "Kövesse a fizetési kéréseket, töltsön le számlákat és indítson bankkártyás fizetést.",
+    "empty": "Még nincsenek díjbekérők.",
+    "errorGeneric": "A művelet nem sikerült.",
+    "table": {
+      "amount": "Összeg",
+      "status": "Állapot",
+      "service": "Szolgáltatás",
+      "dueDate": "Esedékesség",
+      "actions": "Műveletek"
+    },
+    "status": {
+      "PENDING": "Függőben",
+      "SENT": "Kiküldve",
+      "PAID": "Fizetve",
+      "CANCELLED": "Törölve",
+      "REFUNDED": "Visszatérítve"
+    },
+    "view": "Részletek",
+    "detailsTitle": "Díjbekérő",
+    "pay": "Fizetés",
+    "invoice": "Számla letöltése",
+    "statusLabel": "Állapot",
+    "amountLabel": "Összeg",
+    "serviceLabel": "Szolgáltatás",
+    "notesLabel": "Megjegyzés",
+    "dueDateLabel": "Esedékesség",
+    "paid": "A díjbekérő rendezve lett.",
+    "paymentInstructions": "A fizetés Barionon keresztül indítható.",
+    "success": "A fizetés sikeres volt.",
+    "failure": "A fizetés nem sikerült. Próbálja újra vagy keresse ügyfélszolgálatunkat.",
+    "form": {
+      "title": "Új díjbekérő",
+      "subtitle": "Készítsen új díjbekérőt egy ügyfélnek és opcionális szolgáltatásnak.",
+      "client": "Ügyfél",
+      "clientPlaceholder": "Válasszon ügyfelet",
+      "service": "Szolgáltatás",
+      "noService": "Nincs kapcsolt szolgáltatás",
+      "amount": "Összeg",
+      "currency": "Pénznem",
+      "dueDate": "Határidő",
+      "notes": "Megjegyzés",
+      "submit": "Díjbekérő létrehozása",
+      "submitting": "Létrehozás...",
+      "success": "A díjbekérő elkészült"
+    },
+    "manage": {
+      "title": "Munkatársi műveletek",
+      "send": "Díjbekérő küldése",
+      "resend": "Díjbekérő újraküldése",
+      "working": "Feldolgozás...",
+      "sent": "Díjbekérő email elküldve",
+      "markPaid": "Megjelölés fizetettként",
+      "markedPaid": "Díjbekérő fizetettnek jelölve",
+      "alreadyPaid": "Már kifizetve",
+      "createInvoice": "Számla kiállítása",
+      "hasInvoice": "Számla elkészült",
+      "invoiced": "Számla sikeresen létrehozva"
+    }
+  },
+  "auth": {
+    "loginTitle": "Bejelentkezés",
+    "loginSubtitle": "Lépj be az ügyfélportálba.",
+    "loginCta": "Bejelentkezés",
+    "registerTitle": "Regisztráció",
+    "registerSubtitle": "Hozz létre új ügyfél fiókot.",
+    "registerCta": "Fiók létrehozása",
+    "email": "Email",
+    "password": "Jelszó",
+    "name": "Név",
+    "namePlaceholder": "Teljes neved",
+    "languagePreference": "Preferált nyelv",
+    "languageHu": "Magyar",
+    "languageEn": "Angol",
+    "noAccount": "Nincs még fiókod?",
+    "haveAccount": "Már van fiókod?",
+    "login": "Bejelentkezés",
+    "register": "Regisztráció",
+    "logout": "Kijelentkezés",
+    "dashboardLink": "Vezérlőpult",
+    "signedInAs": "Bejelentkezve: {name}",
+    "validationError": "Ellenőrizd a mezőket.",
+    "unknownError": "Ismeretlen hiba történt.",
+    "registrationDisabledTitle": "A regisztráció le van tiltva",
+    "registrationDisabledDescription": "A nyilvános regisztráció jelenleg nem engedélyezett. Ha hozzáférésre van szükséged, vedd fel a kapcsolatot az adminisztrátorral.",
+    "backToLogin": "Vissza a bejelentkezéshez",
+    "forgotPassword": "Elfelejtett jelszó?",
+    "resetTitle": "Jelszó visszaállítás",
+    "resetSubtitle": "Add meg az email címed, hogy elküldjük a visszaállító linket.",
+    "resetCta": "Visszaállító link küldése",
+    "resetEmailSent": "Ha az email létezik, elküldtük a visszaállító linket.",
+    "resetConfirmTitle": "Új jelszó megadása",
+    "resetConfirmSubtitle": "Állíts be új jelszót a fiókodhoz.",
+    "resetConfirmCta": "Jelszó frissítése",
+    "newPassword": "Új jelszó",
+    "resetSuccess": "Jelszó frissítve. Átirányítás a kezdőoldalra..."
+  },
+  "common": {
+    "localeLabel": "Nyelv",
+    "locale": {
+      "hu": "Magyar",
+      "en": "Angol"
+    }
+  }
+}

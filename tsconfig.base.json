@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["DOM", "DOM.Iterable", "ES2020"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@core-domain/*": ["packages/core-domain/src/*"],
+      "@config/*": ["packages/config/src/*"],
+      "@auth/*": ["packages/auth/src/*"],
+      "@users/*": ["packages/users/src/*"],
+      "@services/*": ["packages/services/src/*"],
+      "@tickets/*": ["packages/tickets/src/*"],
+      "@files/*": ["packages/files/src/*"],
+      "@wiki/*": ["packages/wiki/src/*"],
+      "@billing/*": ["packages/billing/src/*"],
+      "@payments-barion/*": ["packages/payments-barion/src/*"],
+      "@integrations-billingo/*": ["packages/integrations-billingo/src/*"],
+      "@email/*": ["packages/email/src/*"],
+      "@jobs/*": ["packages/jobs/src/*"],
+      "@security/*": ["packages/security/src/*"],
+      "@ui/*": ["packages/ui/src/*"]
+    }
+  }
+}

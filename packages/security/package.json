@@ -1,0 +1,14 @@
+{
+  "name": "@security/rate-limit",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "ioredis": "^5.4.1",
+    "@config/env": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}

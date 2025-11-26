@@ -135,7 +135,7 @@ Security defaults:
 - Translation messages live in `apps/web/messages`. The middleware redirects to locale segments.
 
 ### Background workers
-- `apps/worker` consumes BullMQ queues backed by Redis using `REDIS_URL`.
+- `apps/worker` consumes BullMQ queues backed by Redis using `REDIS_URL`. If `REDIS_URL` is omitted, the worker logs a warning and does not start, while API callers log-and-skip queueing to keep runtime stable.
 - Email delivery jobs are added via the shared `@portal/jobs` helpers; the worker invokes the existing Nodemailer pipeline. If the queue is unavailable, callers fall back to immediate sends to avoid losing critical notifications.
 - Extend with processors for PDF generation and other external integrations as needed. Queue defaults include retries and backoff for resiliency.
 

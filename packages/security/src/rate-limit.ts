@@ -7,31 +7,33 @@ const env = parseEnv();
 let redis: Redis | null = null;
 let redisReady = false;
 
-try {
-  redis = new Redis(env.REDIS_URL, {
-    maxRetriesPerRequest: 1,
-    enableOfflineQueue: false,
-    lazyConnect: true
-  });
+if (env.REDIS_URL) {
+  try {
+    redis = new Redis(env.REDIS_URL, {
+      maxRetriesPerRequest: 1,
+      enableOfflineQueue: false,
+      lazyConnect: true
+    });
 
-  redis.on('ready', () => {
-    redisReady = true;
-  });
-  redis.on('end', () => {
-    redisReady = false;
-  });
-  redis.on('error', (error) => {
-    redisReady = false;
-    console.warn('Rate limit Redis connection error, using in-memory fallback', error);
-  });
+    redis.on('ready', () => {
+      redisReady = true;
+    });
+    redis.on('end', () => {
+      redisReady = false;
+    });
+    redis.on('error', (error) => {
+      redisReady = false;
+      console.warn('Rate limit Redis connection error, using in-memory fallback', error);
+    });
 
-  redis.connect().catch((error) => {
-    redisReady = false;
-    console.warn('Rate limit Redis unavailable, using in-memory fallback', error);
-  });
-} catch (error) {
-  console.warn('Rate limit Redis initialization failed, using in-memory fallback', error);
-  redis = null;
+    redis.connect().catch((error) => {
+      redisReady = false;
+      console.warn('Rate limit Redis unavailable, using in-memory fallback', error);
+    });
+  } catch (error) {
+    console.warn('Rate limit Redis initialization failed, using in-memory fallback', error);
+    redis = null;
+  }
 }
 
 export type RateLimitConfig = {

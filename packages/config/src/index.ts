@@ -4,8 +4,8 @@ const envSchema = z.object({
   DATABASE_URL: z.string().url(),
   REDIS_URL: z
     .union([z.string().url(), z.literal('')])
-    .optional()
-    .transform((value) => (!value ? undefined : value)),
+    .default('')
+    .transform((value) => (value && value.length > 0 ? value : undefined)),
   APP_BASE_URL: z.string().url(),
   FILE_STORAGE_ROOT: z.string(),
   SMTP_HOST: z.string(),

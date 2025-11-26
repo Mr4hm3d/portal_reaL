@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
-import { requireCurrentUser } from '@auth';
-import { createArticleSchema, createWikiArticle, listWikiArticles, wikiFilterSchema } from '@wiki';
+import { requireCurrentUser } from '@portal/auth';
+import { createArticleSchema, createWikiArticle, listWikiArticles, wikiFilterSchema } from '@portal/wiki';
 
 export async function GET(request: Request) {
   try {

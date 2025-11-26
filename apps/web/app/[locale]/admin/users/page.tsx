@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
-import { getCurrentUser } from '@auth';
-import { listUsers } from '@users';
+import { getCurrentUser } from '@portal/auth';
+import { listUsers } from '@portal/users';
 
 import { AdminUserForm } from '@/components/admin-user-form';
 

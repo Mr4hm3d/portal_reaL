@@ -133,7 +133,7 @@ Security defaults:
 
 ### Background workers
 - `apps/worker` consumes BullMQ queues backed by Redis using `REDIS_URL`.
-- Email delivery jobs are added via the shared `@jobs` helpers; the worker invokes the existing Nodemailer pipeline. If the queue is unavailable, callers fall back to immediate sends to avoid losing critical notifications.
+- Email delivery jobs are added via the shared `@portal/jobs` helpers; the worker invokes the existing Nodemailer pipeline. If the queue is unavailable, callers fall back to immediate sends to avoid losing critical notifications.
 - Extend with processors for PDF generation and other external integrations as needed. Queue defaults include retries and backoff for resiliency.
 
 ### Email

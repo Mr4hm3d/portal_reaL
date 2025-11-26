@@ -1,6 +1,6 @@
 import Redis from 'ioredis';
 
-import { parseEnv } from '@config/index';
+import { parseEnv } from '@portal/config/index';
 
 const env = parseEnv();
 

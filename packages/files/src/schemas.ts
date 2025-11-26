@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { Visibility } from '@core-domain/prisma';
+import { Visibility } from '@portal/core-domain/prisma';
 
 export const uploadFileMetadataSchema = z.object({
   ticketId: z.string().optional(),

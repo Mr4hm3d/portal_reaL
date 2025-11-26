@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
-import { Visibility } from '@core-domain/prisma';
+import { Visibility } from '@portal/core-domain/prisma';
 
 interface ServiceOption {
   id: string;

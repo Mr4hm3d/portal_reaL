@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-import { clearSessionCookie } from '@auth';
+import { clearSessionCookie } from '@portal/auth';
 
 export async function POST() {
   clearSessionCookie();

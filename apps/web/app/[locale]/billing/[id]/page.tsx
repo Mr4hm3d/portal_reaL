@@ -2,9 +2,9 @@ import Link from 'next/link';
 import { notFound, redirect } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
-import { getCurrentUser } from '@auth';
-import { getBillingRequestById, startBillingRequestPayment } from '@billing';
-import { parseEnv } from '@config';
+import { getCurrentUser } from '@portal/auth';
+import { getBillingRequestById, startBillingRequestPayment } from '@portal/billing';
+import { parseEnv } from '@portal/config';
 import { BillingStaffActions } from '@/components/billing-actions';
 
 export default async function BillingDetailPage({

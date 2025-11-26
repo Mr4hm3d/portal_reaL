@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
-import { requireRole } from '@auth';
-import { createUserSchema, createUser, listUsers } from '@users';
+import { requireRole } from '@portal/auth';
+import { createUserSchema, createUser, listUsers } from '@portal/users';
 
 async function enforceAdmin() {
   try {

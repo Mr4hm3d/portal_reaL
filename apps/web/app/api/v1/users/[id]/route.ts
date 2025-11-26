@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
-import { requireRole } from '@auth';
-import { getUserById, updateUser, updateUserSchema } from '@users';
+import { requireRole } from '@portal/auth';
+import { getUserById, updateUser, updateUserSchema } from '@portal/users';
 
 type RouteParams = { params: { id: string } };
 

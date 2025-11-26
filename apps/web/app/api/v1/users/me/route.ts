@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-import { getCurrentUser, updateProfile } from '@auth';
+import { getCurrentUser, updateProfile } from '@portal/auth';
 
 export async function GET() {
   const user = await getCurrentUser();

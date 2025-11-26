@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 
-import { parseEnv } from '@config/index';
+import { parseEnv } from '@portal/config/index';
 
 export type EmailLanguage = 'hu' | 'en';
 

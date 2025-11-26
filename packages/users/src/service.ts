@@ -1,6 +1,6 @@
-import { prisma } from '@core-domain/prisma';
+import { prisma } from '@portal/core-domain/prisma';
 
-import { hashPassword } from '@auth/password';
+import { hashPassword } from '@portal/auth/password';
 
 import { baseUserFields, type CreateUserInput, type UpdateUserInput } from './schemas';
 

@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
-import { getCurrentUser } from '@auth';
+import { getCurrentUser } from '@portal/auth';
 
 import { TicketForm } from '../../../../components/ticket-form';
 

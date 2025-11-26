@@ -1,6 +1,6 @@
 import { Queue } from 'bullmq';
 
-import { parseEnv } from '@config/index';
+import { parseEnv } from '@portal/config/index';
 import type { EmailJobData } from './types';
 
 const env = parseEnv();

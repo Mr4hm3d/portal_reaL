@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-import type { SupportedLanguage } from '@core-domain/prisma';
+import type { SupportedLanguage } from '@portal/core-domain/prisma';
 
 type ProfileFormValues = {
   name: string;

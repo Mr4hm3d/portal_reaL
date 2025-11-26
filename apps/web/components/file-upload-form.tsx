@@ -4,7 +4,7 @@ import { useState, FormEvent } from 'react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 
-import { Visibility } from '@core-domain/prisma';
+import { Visibility } from '@portal/core-domain/prisma';
 
 interface Option {
   id: string;

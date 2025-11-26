@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { BillingStatus } from '@core-domain/prisma';
+import { BillingStatus } from '@portal/core-domain/prisma';
 
 export const createBillingRequestSchema = z.object({
   clientId: z.string(),

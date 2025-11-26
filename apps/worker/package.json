@@ -10,9 +10,9 @@
   "dependencies": {
     "bullmq": "^5.8.0",
     "ioredis": "^5.4.1",
-    "@config/env": "workspace:*",
-    "@email": "workspace:*",
-    "@jobs": "workspace:*"
+    "@portal/config": "workspace:*",
+    "@portal/email": "workspace:*",
+    "@portal/jobs": "workspace:*"
   },
   "devDependencies": {
     "ts-node-dev": "^2.0.0",

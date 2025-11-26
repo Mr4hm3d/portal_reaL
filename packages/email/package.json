@@ -1,11 +1,11 @@
 {
-  "name": "@email",
+  "name": "@portal/email",
   "version": "0.1.0",
   "main": "src/index.ts",
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "@config/env": "workspace:*",
+    "@portal/config": "workspace:*",
     "nodemailer": "^6.9.11"
   }
 }

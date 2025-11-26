@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-import { getCurrentUser } from '@auth';
-import { parseEnv } from '@config/index';
+import { getCurrentUser } from '@portal/auth';
+import { parseEnv } from '@portal/config/index';
 
 import { LogoutButton } from './logout-button';
 

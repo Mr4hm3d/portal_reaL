@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
-import { getCurrentUser } from '@auth';
+import { getCurrentUser } from '@portal/auth';
 
 export default async function DashboardPage({ params }: { params: { locale: string } }) {
   const user = await getCurrentUser();

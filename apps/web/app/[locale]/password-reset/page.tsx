@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-import { passwordResetRequestSchema } from '@auth/schemas';
+import { passwordResetRequestSchema } from '@portal/auth/schemas';
 
 export default function PasswordResetRequestPage() {
   const t = useTranslations('auth');

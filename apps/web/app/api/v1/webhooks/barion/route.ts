@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-import { handleBarionWebhook } from '@billing';
+import { handleBarionWebhook } from '@portal/billing';
 
 export async function POST(request: Request) {
   const signature = request.headers.get('barion-signature');

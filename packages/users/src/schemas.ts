@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import type { Role, SupportedLanguage } from '@core-domain/prisma';
+import type { Role, SupportedLanguage } from '@portal/core-domain/prisma';
 
 export const baseUserFields = {
   id: true,

@@ -1,15 +1,15 @@
-import { Prisma, prisma, TicketStatus, type Role } from '@core-domain/prisma';
+import { Prisma, prisma, TicketStatus, type Role } from '@portal/core-domain/prisma';
 
-import { type CurrentUser } from '@auth/current-user';
+import { type CurrentUser } from '@portal/auth/current-user';
 
-import { parseEnv } from '@config/index';
+import { parseEnv } from '@portal/config/index';
 import {
   renderTicketCreatedEmail,
   renderTicketReplyEmail,
   renderTicketStatusEmail,
   sendEmail
-} from '@email/service';
-import { enqueueEmail } from '@jobs/index';
+} from '@portal/email/service';
+import { enqueueEmail } from '@portal/jobs/index';
 
 import {
   type CreateTicketInput,

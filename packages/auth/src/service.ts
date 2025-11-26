@@ -1,9 +1,9 @@
 import crypto from 'node:crypto';
 
-import { prisma } from '@core-domain/prisma';
-import type { Role } from '@core-domain/prisma';
-import type { SupportedLanguage } from '@core-domain/prisma';
-import { parseEnv } from '@config/index';
+import { prisma } from '@portal/core-domain/prisma';
+import type { Role } from '@portal/core-domain/prisma';
+import type { SupportedLanguage } from '@portal/core-domain/prisma';
+import { parseEnv } from '@portal/config/index';
 
 import { createSessionToken } from './session';
 import { hashPassword, verifyPassword } from './password';
@@ -19,8 +19,8 @@ import {
   type PasswordResetConfirmInput,
   type ProfileUpdateInput
 } from './schemas';
-import { renderPasswordResetEmail, sendEmail } from '@email/service';
-import { enqueueEmail } from '@jobs/index';
+import { renderPasswordResetEmail, sendEmail } from '@portal/email/service';
+import { enqueueEmail } from '@portal/jobs/index';
 import { baseUserSelect } from './current-user';
 
 export { loginSchema, registrationSchema };

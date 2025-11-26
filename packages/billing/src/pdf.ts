@@ -3,9 +3,9 @@ import path from 'node:path';
 
 import PDFDocument from 'pdfkit';
 
-import { parseEnv } from '@config/index';
+import { parseEnv } from '@portal/config/index';
 
-import { type Prisma } from '@core-domain/prisma';
+import { type Prisma } from '@portal/core-domain/prisma';
 
 export interface ProFormaContext {
   id: string;

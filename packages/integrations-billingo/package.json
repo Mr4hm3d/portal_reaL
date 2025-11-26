@@ -1,5 +1,5 @@
 {
-  "name": "@integrations_billingo",
+  "name": "@portal/integrations-billingo",
   "version": "0.1.0",
   "main": "src/index.ts",
   "private": true,

@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
-import { requireCurrentUser } from '@auth';
-import { fileFilterSchema, listFiles, saveUploadedFile, uploadFileMetadataSchema } from '@files';
+import { requireCurrentUser } from '@portal/auth';
+import { fileFilterSchema, listFiles, saveUploadedFile, uploadFileMetadataSchema } from '@portal/files';
 
 export const runtime = 'nodejs';
 

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 
-import { parseEnv } from '@config/index';
+import { parseEnv } from '@portal/config/index';
 
 import { RegisterForm } from '../../../components/register-form';
 

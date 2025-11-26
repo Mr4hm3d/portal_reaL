@@ -1,6 +1,6 @@
-import { Prisma, Visibility, prisma, type Role } from '@core-domain/prisma';
+import { Prisma, Visibility, prisma, type Role } from '@portal/core-domain/prisma';
 
-import type { CurrentUser } from '@auth/current-user';
+import type { CurrentUser } from '@portal/auth/current-user';
 
 import type {
   CreateArticleInput,

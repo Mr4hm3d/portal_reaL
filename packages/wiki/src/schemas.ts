@@ -1,4 +1,4 @@
-import { Visibility, Language } from '@core-domain/prisma';
+import { Visibility, Language } from '@portal/core-domain/prisma';
 import { z } from 'zod';
 
 export const createArticleSchema = z.object({

@@ -1,9 +1,9 @@
 import { Worker } from 'bullmq';
 
-import { parseEnv } from '@config/index';
-import { sendEmail } from '@email/service';
-import type { EmailJobData } from '@jobs/index';
-import { emailQueue } from '@jobs/index';
+import { parseEnv } from '@portal/config/index';
+import { sendEmail } from '@portal/email/service';
+import type { EmailJobData } from '@portal/jobs/index';
+import { emailQueue } from '@portal/jobs/index';
 
 const env = parseEnv();
 

@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { notFound, redirect } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
-import { getCurrentUser } from '@auth';
-import { getWikiArticle } from '@wiki/service';
+import { getCurrentUser } from '@portal/auth';
+import { getWikiArticle } from '@portal/wiki/service';
 
 export default async function WikiDetailPage({
   params

@@ -1,9 +1,9 @@
 import { redirect } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
-import { getCurrentUser } from '@auth';
-import { listServices } from '@services/service';
-import { listUsers } from '@users/service';
+import { getCurrentUser } from '@portal/auth';
+import { listServices } from '@portal/services/service';
+import { listUsers } from '@portal/users/service';
 import { ServiceAssignForm } from '@/components/service-assign-form';
 import { ServiceTemplateForm } from '@/components/service-template-form';
 

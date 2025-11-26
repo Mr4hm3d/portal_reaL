@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-import { registrationSchema } from '@auth/schemas';
+import { registrationSchema } from '@portal/auth/schemas';
 
 export function RegisterForm() {
   const t = useTranslations('auth');

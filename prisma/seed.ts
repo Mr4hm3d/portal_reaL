@@ -1,6 +1,6 @@
-import { prisma, Role, ServiceType, TicketStatus, Visibility, BillingStatus, Language } from '@core-domain/prisma';
-import { hashPassword } from '@auth/password';
-import { parseEnv } from '@config/index';
+import { prisma, Role, ServiceType, TicketStatus, Visibility, BillingStatus, Language } from '@portal/core-domain/prisma';
+import { hashPassword } from '@portal/auth/password';
+import { parseEnv } from '@portal/config/index';
 
 async function main() {
   parseEnv();

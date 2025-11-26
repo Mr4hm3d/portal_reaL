@@ -5,13 +5,13 @@ import {
   Prisma,
   prisma,
   type Role
-} from '@core-domain/prisma';
+} from '@portal/core-domain/prisma';
 
-import { type CurrentUser } from '@auth/current-user';
-import { parseEnv } from '@config/index';
-import { renderBillingRequestEmail, sendEmail } from '@email/index';
-import { enqueueEmail } from '@jobs/index';
-import { startPayment, verifySignature, type BarionWebhookPayload } from '@payments-barion/index';
+import { type CurrentUser } from '@portal/auth/current-user';
+import { parseEnv } from '@portal/config/index';
+import { renderBillingRequestEmail, sendEmail } from '@portal/email/index';
+import { enqueueEmail } from '@portal/jobs/index';
+import { startPayment, verifySignature, type BarionWebhookPayload } from '@portal/payments-barion/index';
 import { persistProFormaPdf, toProFormaContext } from './pdf';
 
 import {
@@ -25,7 +25,7 @@ import {
   downloadInvoicePdf,
   ensureCustomer,
   type BillingoConfig
-} from '@integrations-billingo/index';
+} from '@portal/integrations-billingo/index';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 

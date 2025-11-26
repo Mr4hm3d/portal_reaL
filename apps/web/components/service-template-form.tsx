@@ -4,7 +4,7 @@ import { FormEvent, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 
-import type { ServiceType } from '@core-domain/prisma';
+import type { ServiceType } from '@portal/core-domain/prisma';
 
 export function ServiceTemplateForm({ locale }: { locale: string }) {
   const t = useTranslations('services');

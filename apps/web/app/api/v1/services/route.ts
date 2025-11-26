@@ -1,13 +1,13 @@
 import { NextResponse } from 'next/server';
 
-import { requireCurrentUser, requireRole } from '@auth';
-import type { ServiceType } from '@core-domain/prisma';
+import { requireCurrentUser, requireRole } from '@portal/auth';
+import type { ServiceType } from '@portal/core-domain/prisma';
 import {
   createServiceSchema,
   createServiceTemplate,
   listServices,
   serviceFilterSchema
-} from '@services';
+} from '@portal/services';
 
 async function enforceAdmin() {
   try {

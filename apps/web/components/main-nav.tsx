@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-import { getCurrentUser } from '@auth';
+import { getCurrentUser } from '@portal/auth';
 
 export async function MainNav({ locale }: { locale: string }) {
   const user = await getCurrentUser();

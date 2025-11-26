@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
 
-import { requireCurrentUser } from '@auth';
-import { parseEnv } from '@config/index';
-import { startBillingRequestPayment, startPaymentSchema } from '@billing';
+import { requireCurrentUser } from '@portal/auth';
+import { parseEnv } from '@portal/config/index';
+import { startBillingRequestPayment, startPaymentSchema } from '@portal/billing';
 
 export async function POST(request: Request, { params }: { params: { id: string } }) {
   const env = parseEnv();

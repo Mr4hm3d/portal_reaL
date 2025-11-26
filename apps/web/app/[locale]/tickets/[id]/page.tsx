@@ -2,11 +2,11 @@ import { notFound, redirect } from 'next/navigation';
 import { revalidatePath } from 'next/cache';
 import { useTranslations } from 'next-intl';
 
-import { TicketStatus } from '@core-domain/prisma';
+import { TicketStatus } from '@portal/core-domain/prisma';
 
-import { getCurrentUser } from '@auth';
-import { listUsers } from '@users/service';
-import { addTicketMessage, getTicketById, listTicketMessages, updateTicket } from '@tickets/service';
+import { getCurrentUser } from '@portal/auth';
+import { listUsers } from '@portal/users/service';
+import { addTicketMessage, getTicketById, listTicketMessages, updateTicket } from '@portal/tickets/service';
 
 import { TicketReplyForm } from '../../../../../components/ticket-reply-form';
 

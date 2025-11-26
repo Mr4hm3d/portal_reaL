@@ -1,13 +1,13 @@
 {
-  "name": "@auth",
+  "name": "@portal/auth",
   "version": "0.1.0",
   "main": "src/index.ts",
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "@core-domain/prisma": "workspace:*",
-    "@config/env": "workspace:*",
-    "@email": "workspace:*",
+    "@portal/core-domain": "workspace:*",
+    "@portal/config": "workspace:*",
+    "@portal/email": "workspace:*",
     "bcryptjs": "^2.4.3",
     "jose": "^5.9.4",
     "zod": "^3.23.8"

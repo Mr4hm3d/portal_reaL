@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { TicketStatus } from '@core-domain/prisma';
+import { TicketStatus } from '@portal/core-domain/prisma';
 
 export const createTicketSchema = z.object({
   title: z.string().min(3),

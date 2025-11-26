@@ -1,6 +1,6 @@
-import { Prisma, prisma, type Role, ServiceType } from '@core-domain/prisma';
+import { Prisma, prisma, type Role, ServiceType } from '@portal/core-domain/prisma';
 
-import type { CurrentUser } from '@auth/current-user';
+import type { CurrentUser } from '@portal/auth/current-user';
 
 import type {
   AssignServiceInput,

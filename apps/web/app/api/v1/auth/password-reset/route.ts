@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
 
-import { parseEnv } from '@config/index';
-import { passwordResetRequestSchema, requestPasswordReset } from '@auth';
-import { defaultRateLimitConfig, rateLimitHeaders, rateLimitRequest } from '@security/rate-limit';
+import { parseEnv } from '@portal/config/index';
+import { passwordResetRequestSchema, requestPasswordReset } from '@portal/auth';
+import { defaultRateLimitConfig, rateLimitHeaders, rateLimitRequest } from '@portal/security/rate-limit';
 
 export async function POST(request: Request) {
   const rate = await rateLimitRequest(request, 'auth:password-reset-request', defaultRateLimitConfig);

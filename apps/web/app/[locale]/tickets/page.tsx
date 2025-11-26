@@ -2,10 +2,10 @@ import { redirect } from 'next/navigation';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-import { getCurrentUser } from '@auth';
-import { TicketStatus } from '@core-domain/prisma';
-import { listServices } from '@services/service';
-import { listTickets } from '@tickets/service';
+import { getCurrentUser } from '@portal/auth';
+import { TicketStatus } from '@portal/core-domain/prisma';
+import { listServices } from '@portal/services/service';
+import { listTickets } from '@portal/tickets/service';
 
 type SearchParams = Record<string, string | string[] | undefined>;
 

@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-import { createUserSchema } from '@users/schemas';
+import { createUserSchema } from '@portal/users/schemas';
 
 const roleOptions = ['ADMIN', 'SUPPORT', 'BILLING', 'CLIENT'] as const;
 

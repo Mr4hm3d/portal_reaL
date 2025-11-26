@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
-import { requireCurrentUser, requireRole } from '@auth';
-import { assignServiceSchema, assignServiceToClient } from '@services';
+import { requireCurrentUser, requireRole } from '@portal/auth';
+import { assignServiceSchema, assignServiceToClient } from '@portal/services';
 
 async function enforceAdmin() {
   try {

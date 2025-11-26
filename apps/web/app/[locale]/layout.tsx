@@ -5,7 +5,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { ReactNode } from 'react';
 
-import { parseEnv } from '@config/index';
+import { parseEnv } from '@portal/config/index';
 
 import { AuthNav } from '../../components/auth-nav';
 import { LocaleSwitcher } from '../../components/locale-switcher';

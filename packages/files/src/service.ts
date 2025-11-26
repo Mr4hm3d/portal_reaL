@@ -2,9 +2,9 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { randomUUID } from 'node:crypto';
 
-import type { CurrentUser } from '@auth/current-user';
-import { parseEnv } from '@config/index';
-import { Prisma, prisma, Visibility, type Role } from '@core-domain/prisma';
+import type { CurrentUser } from '@portal/auth/current-user';
+import { parseEnv } from '@portal/config/index';
+import { Prisma, prisma, Visibility, type Role } from '@portal/core-domain/prisma';
 
 import type { FileFilterInput, UploadFileMetadata } from './schemas';
 

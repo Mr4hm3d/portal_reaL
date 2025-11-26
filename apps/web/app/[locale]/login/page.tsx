@@ -6,7 +6,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-import { loginSchema } from '@auth/schemas';
+import { loginSchema } from '@portal/auth/schemas';
 
 export default function LoginPage() {
   const t = useTranslations('auth');

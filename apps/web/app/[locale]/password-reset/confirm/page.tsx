@@ -5,7 +5,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-import { passwordResetConfirmSchema } from '@auth/schemas';
+import { passwordResetConfirmSchema } from '@portal/auth/schemas';
 
 export default function PasswordResetConfirmPage() {
   const t = useTranslations('auth');

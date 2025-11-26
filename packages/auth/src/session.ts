@@ -1,8 +1,8 @@
 import { SignJWT, jwtVerify } from 'jose';
 import { cookies } from 'next/headers';
 
-import type { Role } from '@core-domain/prisma';
-import { parseEnv } from '@config/index';
+import type { Role } from '@portal/core-domain/prisma';
+import { parseEnv } from '@portal/config/index';
 
 export type SessionPayload = {
   sub: string;

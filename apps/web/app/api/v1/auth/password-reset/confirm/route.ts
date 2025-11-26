@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
-import { confirmPasswordReset, passwordResetConfirmSchema } from '@auth';
-import { defaultRateLimitConfig, rateLimitHeaders, rateLimitRequest } from '@security/rate-limit';
+import { confirmPasswordReset, passwordResetConfirmSchema } from '@portal/auth';
+import { defaultRateLimitConfig, rateLimitHeaders, rateLimitRequest } from '@portal/security/rate-limit';
 
 export async function POST(request: Request) {
   const rate = await rateLimitRequest(request, 'auth:password-reset-confirm', defaultRateLimitConfig);

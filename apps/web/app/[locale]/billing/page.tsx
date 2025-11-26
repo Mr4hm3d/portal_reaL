@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
-import { getCurrentUser } from '@auth';
-import { listBillingRequests } from '@billing';
-import { type Role } from '@core-domain/prisma';
-import { listServices } from '@services';
-import { listUsers } from '@users';
+import { getCurrentUser } from '@portal/auth';
+import { listBillingRequests } from '@portal/billing';
+import { type Role } from '@portal/core-domain/prisma';
+import { listServices } from '@portal/services';
+import { listUsers } from '@portal/users';
 import { BillingRequestForm } from '@/components/billing-request-form';
 
 export default async function BillingPage({

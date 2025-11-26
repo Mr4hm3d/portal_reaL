@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
 
-import { requireCurrentUser, requireRole } from '@auth';
-import { type Role } from '@core-domain/prisma';
-import { sendBillingRequest } from '@billing';
+import { requireCurrentUser, requireRole } from '@portal/auth';
+import { type Role } from '@portal/core-domain/prisma';
+import { sendBillingRequest } from '@portal/billing';
 
 async function enforceBillingStaff() {
   try {

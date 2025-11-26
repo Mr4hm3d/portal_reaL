@@ -2,10 +2,10 @@ import { redirect } from 'next/navigation';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-import { getCurrentUser } from '@auth';
-import { listFiles } from '@files';
-import { listServices } from '@services/service';
-import { listTickets } from '@tickets/service';
+import { getCurrentUser } from '@portal/auth';
+import { listFiles } from '@portal/files';
+import { listServices } from '@portal/services/service';
+import { listTickets } from '@portal/tickets/service';
 
 import { FileUploadForm } from '@/components/file-upload-form';
 

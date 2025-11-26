@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import type { ServiceType } from '@core-domain/prisma';
+import type { ServiceType } from '@portal/core-domain/prisma';
 
 const serviceTypeEnum = z.enum(['MONTHLY', 'ONE_TIME', 'CUSTOM'] satisfies ServiceType[]);
 

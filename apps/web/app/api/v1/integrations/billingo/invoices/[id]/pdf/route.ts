@@ -1,8 +1,8 @@
 import fs from 'node:fs/promises';
 import { NextResponse } from 'next/server';
 
-import { requireCurrentUser } from '@auth';
-import { resolveInvoiceFile } from '@billing';
+import { requireCurrentUser } from '@portal/auth';
+import { resolveInvoiceFile } from '@portal/billing';
 
 export async function GET(_: Request, { params }: { params: { id: string } }) {
   try {

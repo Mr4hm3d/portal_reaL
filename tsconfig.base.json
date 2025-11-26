@@ -12,21 +12,21 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@core-domain/*": ["packages/core-domain/src/*"],
-      "@config/*": ["packages/config/src/*"],
-      "@auth/*": ["packages/auth/src/*"],
-      "@users/*": ["packages/users/src/*"],
-      "@services/*": ["packages/services/src/*"],
-      "@tickets/*": ["packages/tickets/src/*"],
-      "@files/*": ["packages/files/src/*"],
-      "@wiki/*": ["packages/wiki/src/*"],
-      "@billing/*": ["packages/billing/src/*"],
-      "@payments-barion/*": ["packages/payments-barion/src/*"],
-      "@integrations-billingo/*": ["packages/integrations-billingo/src/*"],
-      "@email/*": ["packages/email/src/*"],
-      "@jobs/*": ["packages/jobs/src/*"],
-      "@security/*": ["packages/security/src/*"],
-      "@ui/*": ["packages/ui/src/*"]
+      "@portal/core-domain/*": ["packages/core-domain/src/*"],
+      "@portal/config/*": ["packages/config/src/*"],
+      "@portal/auth/*": ["packages/auth/src/*"],
+      "@portal/users/*": ["packages/users/src/*"],
+      "@portal/services/*": ["packages/services/src/*"],
+      "@portal/tickets/*": ["packages/tickets/src/*"],
+      "@portal/files/*": ["packages/files/src/*"],
+      "@portal/wiki/*": ["packages/wiki/src/*"],
+      "@portal/billing/*": ["packages/billing/src/*"],
+      "@portal/payments-barion/*": ["packages/payments-barion/src/*"],
+      "@portal/integrations-billingo/*": ["packages/integrations-billingo/src/*"],
+      "@portal/email/*": ["packages/email/src/*"],
+      "@portal/jobs/*": ["packages/jobs/src/*"],
+      "@portal/security/*": ["packages/security/src/*"],
+      "@portal/ui/*": ["packages/ui/src/*"]
     }
   }
 }

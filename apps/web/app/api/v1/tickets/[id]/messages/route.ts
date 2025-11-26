@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
-import { requireCurrentUser } from '@auth';
-import { addTicketMessage, listTicketMessages, ticketMessageSchema } from '@tickets';
+import { requireCurrentUser } from '@portal/auth';
+import { addTicketMessage, listTicketMessages, ticketMessageSchema } from '@portal/tickets';
 
 export async function GET(_: Request, { params }: { params: { id: string } }) {
   try {

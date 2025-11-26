@@ -2,10 +2,10 @@ import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
-import type { Role } from '@core-domain/prisma';
-import { getCurrentUser } from '@auth';
-import { listServices } from '@services/service';
-import { listWikiArticles } from '@wiki/service';
+import type { Role } from '@portal/core-domain/prisma';
+import { getCurrentUser } from '@portal/auth';
+import { listServices } from '@portal/services/service';
+import { listWikiArticles } from '@portal/wiki/service';
 
 import { WikiForm } from '../../../components/wiki-form';
 

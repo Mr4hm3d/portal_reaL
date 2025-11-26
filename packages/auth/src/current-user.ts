@@ -1,5 +1,5 @@
-import type { Role, User } from '@core-domain/prisma';
-import { prisma } from '@core-domain/prisma';
+import type { Role, User } from '@portal/core-domain/prisma';
+import { prisma } from '@portal/core-domain/prisma';
 
 import { getSessionFromCookies } from './session';
 

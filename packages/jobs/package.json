@@ -1,11 +1,11 @@
 {
-  "name": "@jobs",
+  "name": "@portal/jobs",
   "version": "0.1.0",
   "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {
-    "@config": "workspace:*",
-    "@email": "workspace:*",
+    "@portal/config": "workspace:*",
+    "@portal/email": "workspace:*",
     "bullmq": "^4.14.2"
   }
 }

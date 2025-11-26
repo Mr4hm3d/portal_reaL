@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
 
-import { requireCurrentUser } from '@auth';
-import { TicketStatus } from '@core-domain/prisma';
-import { createTicket, createTicketSchema, listTickets, ticketFilterSchema } from '@tickets';
+import { requireCurrentUser } from '@portal/auth';
+import { TicketStatus } from '@portal/core-domain/prisma';
+import { createTicket, createTicketSchema, listTickets, ticketFilterSchema } from '@portal/tickets';
 
 export async function GET(request: Request) {
   try {

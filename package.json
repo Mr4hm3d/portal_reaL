@@ -16,6 +16,11 @@
     "test": "turbo test",
     "prepare": "husky install"
   },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=9.0.0"
+  },
+  "packageManager": "npm@10.8.1",
   "prisma": {
     "seed": "tsx prisma/seed.ts"
   },

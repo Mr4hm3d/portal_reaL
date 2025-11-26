@@ -22,7 +22,9 @@ prisma/                  Prisma schema targeting PostgreSQL
    ```bash
    npm install
    ```
-   Local packages are linked via `file:` dependencies for compatibility with older npm versions, so installing from the repo root will wire the internal modules without requiring workspace protocol support.
+   - Use **npm 9+** (the repository declares `packageManager: npm@10.8.1`) so workspace linking works reliably on Windows and Linux. Older npm releases may emit `workspace:*` or peer dependency errors.
+   - Local packages are linked via `file:` dependencies for compatibility with older npm versions, so installing from the repo root will wire the internal modules without requiring workspace protocol support.
+   - If your environment blocks the public npm registry, configure an allowlisted mirror in `.npmrc` or set `npm config set registry https://registry.npmjs.org`.
 2. **Copy environment** and edit values (defaults align with the local docker-compose stack):
    ```bash
    cp .env.example .env

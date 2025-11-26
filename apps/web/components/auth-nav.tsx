@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
 import { getCurrentUser } from '@portal/auth';
 import { parseEnv } from '@portal/config/index';
@@ -7,7 +7,7 @@ import { parseEnv } from '@portal/config/index';
 import { LogoutButton } from './logout-button';
 
 export async function AuthNav({ locale }: { locale: string }) {
-  const t = useTranslations('auth');
+  const t = await getTranslations('auth');
   const user = await getCurrentUser();
   let allowPublicRegistration = true;
   try {

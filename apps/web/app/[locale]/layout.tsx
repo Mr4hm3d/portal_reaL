@@ -2,7 +2,6 @@ import '../globals.css';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
 import { ReactNode } from 'react';
 
 import { parseEnv } from '@portal/config/index';
@@ -10,6 +9,8 @@ import { parseEnv } from '@portal/config/index';
 import { AuthNav } from '../../components/auth-nav';
 import { LocaleSwitcher } from '../../components/locale-switcher';
 import { MainNav } from '../../components/main-nav';
+import en from '../../messages/en.json';
+import hu from '../../messages/hu.json';
 
 export const metadata: Metadata = {
   title: 'Client Portal',
@@ -23,7 +24,8 @@ export default async function LocaleLayout({
   children: ReactNode;
   params: { locale: string };
 }) {
-  const messages = await getMessages();
+  const normalizedLocale = params.locale === 'en' ? 'en' : 'hu';
+  const messages = normalizedLocale === 'en' ? en : hu;
   let brandName = 'Portal';
   let brandColor = '#0f172a';
 
@@ -37,13 +39,13 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={params.locale}>
+    <html lang={normalizedLocale}>
       <body className="min-h-screen bg-slate-50 text-slate-900">
-        <NextIntlClientProvider locale={params.locale} messages={messages}>
+        <NextIntlClientProvider locale={normalizedLocale} messages={messages}>
           <header className="sticky top-0 z-10 border-b border-slate-200 bg-white/80 backdrop-blur">
             <div className="mx-auto flex max-w-5xl flex-col gap-3 px-6 py-4">
               <div className="flex items-center justify-between">
-                <Link href={`/${params.locale}`} className="flex items-center gap-2 text-lg font-semibold">
+                <Link href={`/${normalizedLocale}`} className="flex items-center gap-2 text-lg font-semibold">
                   <span className="h-3 w-3 rounded-full" style={{ backgroundColor: brandColor }} />
                   <span>{brandName}</span>
                 </Link>

@@ -1,7 +1,7 @@
 'use client';
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import React from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
 const locales = [
@@ -20,6 +20,7 @@ function buildHref(pathname: string, targetLocale: string) {
 export function LocaleSwitcher({ currentLocale }: { currentLocale: string }) {
   const pathname = usePathname();
   const t = useTranslations('common');
+  const router = useRouter();
 
   if (!pathname) return null;
 
@@ -30,17 +31,22 @@ export function LocaleSwitcher({ currentLocale }: { currentLocale: string }) {
         {locales.map((locale) => {
           const href = buildHref(pathname, locale.code);
           const isActive = locale.code === currentLocale;
+          const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+            event.preventDefault();
+            document.cookie = `lang=${locale.code}; path=/; SameSite=Lax`;
+            router.push(href);
+          };
           return (
-            <Link
+            <a
               key={locale.code}
               href={href}
-              prefetch={false}
+              onClick={handleClick}
               className={`px-3 py-1 transition hover:bg-slate-50 ${
                 isActive ? 'bg-slate-100 font-semibold text-slate-900' : 'text-slate-700'
               }`}
             >
               {t(locale.labelKey)}
-            </Link>
+            </a>
           );
         })}
       </div>

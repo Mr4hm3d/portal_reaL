@@ -1,0 +1,22 @@
+{
+  "name": "client-portal-worker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only --require tsconfig-paths/register src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "bullmq": "^5.8.0",
+    "ioredis": "^5.4.1",
+    "@portal/config": "file:../../packages/config",
+    "@portal/email": "file:../../packages/email",
+    "@portal/jobs": "file:../../packages/jobs"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.4.5"
+  }
+}

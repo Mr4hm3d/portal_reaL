@@ -1,0 +1,12 @@
+{
+  "name": "@portal/tickets",
+  "version": "0.1.0",
+  "main": "src/index.ts",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "@portal/core-domain": "file:../core-domain",
+    "@portal/auth": "file:../auth",
+    "zod": "^3.23.8"
+  }
+}

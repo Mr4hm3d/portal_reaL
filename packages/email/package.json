@@ -1,0 +1,11 @@
+{
+  "name": "@portal/email",
+  "version": "0.1.0",
+  "main": "src/index.ts",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "@portal/config": "file:../config",
+    "nodemailer": "^6.9.11"
+  }
+}

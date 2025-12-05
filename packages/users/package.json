@@ -1,0 +1,12 @@
+{
+  "name": "@portal/users",
+  "version": "0.1.0",
+  "main": "src/index.ts",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "@portal/auth": "file:../auth",
+    "@portal/core-domain": "file:../core-domain",
+    "zod": "^3.23.8"
+  }
+}

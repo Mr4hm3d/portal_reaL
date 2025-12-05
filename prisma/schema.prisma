@@ -1,0 +1,202 @@
+// Prisma schema defining core entities for the client portal
+// Database default provider is PostgreSQL; adjust via DATABASE_URL.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  SUPPORT
+  BILLING
+  CLIENT
+}
+
+enum TicketStatus {
+  OPEN
+  PENDING
+  IN_PROGRESS
+  RESOLVED
+  CLOSED
+}
+
+enum ServiceType {
+  MONTHLY
+  ONE_TIME
+  CUSTOM
+}
+
+enum Visibility {
+  PUBLIC
+  CLIENT_ONLY
+  INTERNAL
+  PRIVATE
+}
+
+enum BillingStatus {
+  PENDING
+  SENT
+  PAID
+  CANCELLED
+  REFUNDED
+}
+
+enum PaymentStatus {
+  INITIATED
+  PENDING
+  SUCCESS
+  FAILED
+}
+
+enum PaymentProvider {
+  BARION
+}
+
+enum Language {
+  hu
+  en
+}
+
+model User {
+  id                String   @id @default(cuid())
+  email             String   @unique
+  passwordHash      String
+  name              String
+  preferredLanguage Language @default(hu)
+  roles             Role[]
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  tickets           Ticket[] @relation("TicketCreator")
+  ticketMessages    TicketMessage[]
+  services          Service[] @relation("ClientServices")
+  files             File[]
+  billingRequests   BillingRequest[]
+}
+
+model Service {
+  id           String       @id @default(cuid())
+  title        String
+  description  String
+  type         ServiceType
+  price        Decimal      @db.Decimal(18, 2)
+  client       User?        @relation("ClientServices", fields: [clientId], references: [id])
+  clientId     String?
+  metadata     Json?
+  wikiArticles WikiArticle[]
+  tickets      Ticket[]
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+}
+
+model Ticket {
+  id           String        @id @default(cuid())
+  title        String
+  description  String
+  createdBy    User          @relation("TicketCreator", fields: [createdById], references: [id])
+  createdById  String
+  assignedTo   User?         @relation(fields: [assignedToId], references: [id])
+  assignedToId String?
+  status       TicketStatus  @default(OPEN)
+  priority     Int           @default(0)
+  service      Service?      @relation(fields: [serviceId], references: [id])
+  serviceId    String?
+  messages     TicketMessage[]
+  files        File[]
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+}
+
+model TicketMessage {
+  id        String   @id @default(cuid())
+  ticket    Ticket   @relation(fields: [ticketId], references: [id])
+  ticketId  String
+  author    User     @relation(fields: [authorId], references: [id])
+  authorId  String
+  content   String
+  files     File[]
+  createdAt DateTime @default(now())
+}
+
+model File {
+  id           String     @id @default(cuid())
+  filename     String
+  relativePath String
+  mimeType     String
+  size         Int
+  owner        User       @relation(fields: [ownerId], references: [id])
+  ownerId      String
+  visibility   Visibility @default(PRIVATE)
+  ticket       Ticket?    @relation(fields: [ticketId], references: [id])
+  ticketId     String?
+  service      Service?   @relation(fields: [serviceId], references: [id])
+  serviceId    String?
+  message      TicketMessage? @relation(fields: [messageId], references: [id])
+  messageId    String?
+  createdAt    DateTime    @default(now())
+}
+
+model WikiArticle {
+  id              String     @id @default(cuid())
+  title           String
+  contentMarkdown String
+  service         Service?   @relation(fields: [serviceId], references: [id])
+  serviceId       String?
+  visibility      Visibility @default(PUBLIC)
+  language        Language   @default(hu)
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+}
+
+model BillingRequest {
+  id               String        @id @default(cuid())
+  client           User          @relation(fields: [clientId], references: [id])
+  clientId         String
+  service          Service?      @relation(fields: [serviceId], references: [id])
+  serviceId        String?
+  amount           Decimal       @db.Decimal(18, 2)
+  currency         String        @default("HUF")
+  status           BillingStatus @default(PENDING)
+  pdfRelativePath  String?
+  billingoInvoiceId String?
+  invoicePdfRelativePath String?
+  dueDate          DateTime?
+  notes            String?
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+
+  paymentTransactions PaymentTransaction[]
+}
+
+model PaymentTransaction {
+  id               String          @id @default(cuid())
+  provider         PaymentProvider
+  providerPaymentId String
+  status           PaymentStatus   @default(PENDING)
+  amount           Decimal         @db.Decimal(18, 2)
+  currency         String
+  billingRequest   BillingRequest  @relation(fields: [billingRequestId], references: [id])
+  billingRequestId String
+  rawResponse      Json?
+  rawWebhook       Json?
+  createdAt        DateTime        @default(now())
+  updatedAt        DateTime        @updatedAt
+
+  @@unique([provider, providerPaymentId])
+}
+
+model PasswordResetToken {
+  id         String   @id @default(cuid())
+  tokenHash  String   @unique
+  user       User     @relation(fields: [userId], references: [id])
+  userId     String
+  expiresAt  DateTime
+  usedAt     DateTime?
+  createdAt  DateTime @default(now())
+
+  @@index([userId])
+}

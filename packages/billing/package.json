@@ -1,0 +1,18 @@
+{
+  "name": "@portal/billing",
+  "version": "0.1.0",
+  "main": "src/index.ts",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "@portal/config": "file:../config",
+    "@portal/core-domain": "file:../core-domain",
+    "@portal/email": "file:../email",
+    "@portal/integrations-billingo": "file:../integrations-billingo",
+    "@portal/payments-barion": "file:../payments-barion",
+    "pdfkit": "^0.15.0"
+  },
+  "devDependencies": {
+    "@types/pdfkit": "^0.13.9"
+  }
+}

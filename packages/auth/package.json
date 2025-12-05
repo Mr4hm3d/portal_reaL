@@ -1,0 +1,18 @@
+{
+  "name": "@portal/auth",
+  "version": "0.1.0",
+  "main": "src/index.ts",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "@portal/core-domain": "file:../core-domain",
+    "@portal/config": "file:../config",
+    "@portal/email": "file:../email",
+    "bcryptjs": "^2.4.3",
+    "jose": "^5.9.4",
+    "zod": "^3.23.8"
+  },
+  "peerDependencies": {
+    "next": ">=14.0.0"
+  }
+}

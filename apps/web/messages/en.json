@@ -1,0 +1,383 @@
+{
+  "home": {
+    "tagline": "Client portal MVP",
+    "title": "White-label client portal",
+    "description": "Next.js powered portal with i18n support, modular architecture, and Hungarian defaults.",
+    "ctaDashboard": "Go to dashboard",
+    "ctaLogin": "Log in"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "description": "Overview of services, support tickets, and billing tasks will appear here.",
+    "welcome": "Welcome, {name}!",
+    "nextSteps": "Next steps",
+    "todoTickets": "Open or reply to support tickets.",
+    "todoServices": "Review your assigned services.",
+    "todoBilling": "Check payment requests and invoices.",
+    "account": "Your account",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "rolesLabel": "Roles"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "tickets": "Tickets",
+    "services": "Services",
+    "wiki": "Knowledge base",
+    "billing": "Billing",
+    "files": "Files",
+    "users": "Users",
+    "account": "Account"
+  },
+  "account": {
+    "title": "Account settings",
+    "subtitle": "Manage your profile details and security.",
+    "profileHeading": "Profile",
+    "profileDescription": "Update your display name and preferred language.",
+    "emailLabel": "Email",
+    "nameLabel": "Name",
+    "languageLabel": "Preferred language",
+    "languageHu": "Hungarian",
+    "languageEn": "English",
+    "saveProfile": "Save profile",
+    "profileSuccess": "Profile updated successfully.",
+    "profileError": "Could not update your profile.",
+    "passwordHeading": "Security",
+    "passwordDescription": "Change your password to keep your account secure.",
+    "currentPassword": "Current password",
+    "newPassword": "New password",
+    "savePassword": "Update password",
+    "passwordSuccess": "Password updated successfully.",
+    "passwordError": "Could not update your password.",
+    "unknownError": "Unexpected error"
+  },
+  "adminUsers": {
+    "title": "User management",
+    "intro": "Create and manage portal accounts.",
+    "backToDashboard": "Back to dashboard",
+    "listTitle": "Existing users",
+    "listSubtitle": "Accounts currently registered in the portal.",
+    "table": {
+      "name": "Name",
+      "email": "Email",
+      "roles": "Roles",
+      "language": "Language",
+      "created": "Created"
+    },
+    "empty": "No users yet.",
+    "createTitle": "Create user",
+    "createSubtitle": "Add a new account with appropriate roles.",
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "password": "Password",
+      "language": "Preferred language",
+      "roles": "Roles"
+    },
+    "languages": {
+      "hu": "Hungarian",
+      "en": "English"
+    },
+    "roles": {
+      "ADMIN": "Admin",
+      "SUPPORT": "Support",
+      "BILLING": "Billing",
+      "CLIENT": "Client"
+    },
+    "roleHint": "Select one or more roles for this user.",
+    "creating": "Creating...",
+    "createCta": "Create user",
+    "createSuccess": "User created successfully.",
+    "errorGeneric": "Unable to create the user."
+  },
+  "files": {
+    "title": "Files",
+    "intro": "Upload and access files attached to your tickets and services.",
+    "empty": "No files yet.",
+    "table": {
+      "filename": "Filename",
+      "visibility": "Visibility",
+      "links": "Links",
+      "size": "Size",
+      "created": "Uploaded",
+      "actions": "Actions",
+      "download": "Download",
+      "ticketLink": "View ticket",
+      "serviceLink": "View service"
+    },
+    "visibility": {
+      "PUBLIC": "Public",
+      "CLIENT_ONLY": "Clients",
+      "INTERNAL": "Internal",
+      "PRIVATE": "Private"
+    },
+    "form": {
+      "file": "File",
+      "ticket": "Ticket (optional)",
+      "service": "Service (optional)",
+      "noTicket": "No ticket",
+      "noService": "No service",
+      "ticketHint": "Link the upload to a support ticket if applicable.",
+      "serviceHint": "Link the upload to a service if applicable.",
+      "visibility": "Visibility",
+      "visibilityHint": "Choose who can access the file.",
+      "submit": "Upload file",
+      "submitting": "Uploading..."
+    },
+    "errors": {
+      "missingFile": "Please choose a file to upload.",
+      "generic": "Unable to upload the file. Please try again."
+    }
+  },
+  "tickets": {
+    "title": "Support tickets",
+    "intro": "Track and discuss your requests.",
+    "newTicket": "New ticket",
+    "empty": "No tickets yet.",
+    "table": {
+      "title": "Title",
+      "status": "Status",
+      "priority": "Priority",
+      "service": "Service",
+      "noService": "Not linked",
+      "updated": "Last update"
+    },
+    "newTitle": "Create a new ticket",
+    "newIntro": "Share the details of your request and our team will respond.",
+    "form": {
+      "title": "Title",
+      "description": "Description",
+      "priority": "Priority"
+    },
+    "submit": "Submit ticket",
+    "submitting": "Submitting...",
+    "errorGeneric": "Unable to process your request. Please try again.",
+    "detailIntro": "Review the conversation and post replies.",
+    "messages": "Messages",
+    "messagesEmpty": "No replies yet.",
+    "assignedTo": "Assigned to",
+    "replyForm": "Add a reply",
+    "replyLabel": "Message",
+    "replyHint": "Replies are visible to portal users with access to this ticket.",
+    "send": "Send reply",
+    "sending": "Sending...",
+    "statuses": {
+      "OPEN": "Open",
+      "PENDING": "Pending",
+      "IN_PROGRESS": "In progress",
+      "RESOLVED": "Resolved",
+      "CLOSED": "Closed"
+    },
+    "manage": {
+      "title": "Manage ticket",
+      "help": "Only staff users can update the status or assignee.",
+      "status": "Status",
+      "assignee": "Assignee",
+      "unassigned": "Unassigned",
+      "save": "Save changes"
+    },
+    "filters": {
+      "status": "Status",
+      "service": "Service",
+      "priority": "Priority",
+      "all": "All",
+      "apply": "Apply filters",
+      "clear": "Clear"
+    },
+    "priorities": {
+      "0": "Lowest",
+      "1": "Low",
+      "2": "Normal",
+      "3": "High",
+      "4": "Urgent",
+      "5": "Critical"
+    }
+  },
+  "services": {
+    "title": "Services",
+    "intro": "Active service templates and client assignments.",
+    "empty": "No services available yet.",
+    "templates": "Service templates",
+    "templateHint": "Reusable definitions without client binding.",
+    "templateEmpty": "No templates created yet.",
+    "assignments": "Client services",
+    "assignmentHint": "Services assigned to specific clients.",
+    "assignedEmpty": "No services assigned yet.",
+    "assignedTo": "Assigned to {name}",
+    "form": {
+      "titleLabel": "Create a template",
+      "descriptionLabel": "Define reusable services with pricing and optional metadata.",
+      "title": "Title",
+      "description": "Description",
+      "type": "Type",
+      "price": "Price (HUF)",
+      "metadata": "Metadata (JSON, optional)",
+      "types": {
+        "MONTHLY": "Monthly",
+        "ONE_TIME": "One time",
+        "CUSTOM": "Custom"
+      },
+      "invalidMetadata": "Metadata must be valid JSON.",
+      "error": "Unable to create template.",
+      "submitting": "Saving...",
+      "submit": "Create template"
+    },
+    "assign": {
+      "title": "Assign template to client",
+      "description": "Clone a template for a specific client.",
+      "template": "Template",
+      "client": "Client",
+      "noTemplates": "No templates to assign",
+      "noClients": "No clients available",
+      "missingSelection": "Select a template and client.",
+      "error": "Unable to assign service.",
+      "submitting": "Assigning...",
+      "submit": "Assign service"
+    }
+  },
+  "wiki": {
+    "title": "Knowledge base",
+    "intro": "Browse documentation and answers relevant to your services.",
+    "empty": "No articles found.",
+    "visibility": {
+      "PUBLIC": "Public",
+      "CLIENT_ONLY": "Clients",
+      "INTERNAL": "Internal"
+    },
+    "view": "View",
+    "back": "Back to knowledge base",
+    "form": {
+      "label": "Create article",
+      "title": "Add a new knowledge base entry",
+      "fields": {
+        "title": "Title",
+        "service": "Service (optional)",
+        "content": "Content",
+        "visibility": "Visibility",
+        "language": "Language"
+      },
+      "placeholders": {
+        "service": "No service"
+      },
+      "visibility": {
+        "PUBLIC": "Public",
+        "CLIENT_ONLY": "Clients",
+        "INTERNAL": "Internal"
+      },
+      "languages": {
+        "hu": "Hungarian",
+        "en": "English"
+      },
+      "actions": {
+        "submit": "Publish article",
+        "submitting": "Publishing..."
+      },
+      "success": "Article created successfully"
+    }
+  },
+  "billing": {
+    "title": "Billing requests",
+    "intro": "Track payment requests, download invoices, and start card payments.",
+    "empty": "No billing requests yet.",
+    "errorGeneric": "Unable to process request.",
+    "table": {
+      "amount": "Amount",
+      "status": "Status",
+      "service": "Service",
+      "dueDate": "Due date",
+      "actions": "Actions"
+    },
+    "status": {
+      "PENDING": "Pending",
+      "SENT": "Sent",
+      "PAID": "Paid",
+      "CANCELLED": "Cancelled",
+      "REFUNDED": "Refunded"
+    },
+    "view": "View",
+    "detailsTitle": "Billing request",
+    "pay": "Pay now",
+    "invoice": "Download invoice",
+    "statusLabel": "Status",
+    "amountLabel": "Amount",
+    "serviceLabel": "Service",
+    "notesLabel": "Notes",
+    "dueDateLabel": "Due date",
+    "paid": "This request has been paid.",
+    "paymentInstructions": "You can complete card payment via Barion.",
+    "success": "Payment successful.",
+    "failure": "Payment failed. Please try again or contact support.",
+    "form": {
+      "title": "Create billing request",
+      "subtitle": "Issue a new pro forma for a client and optional service.",
+      "client": "Client",
+      "clientPlaceholder": "Select a client",
+      "service": "Service",
+      "noService": "No linked service",
+      "amount": "Amount",
+      "currency": "Currency",
+      "dueDate": "Due date",
+      "notes": "Notes",
+      "submit": "Create request",
+      "submitting": "Creating...",
+      "success": "Billing request created"
+    },
+    "manage": {
+      "title": "Staff actions",
+      "send": "Send pro forma",
+      "resend": "Resend pro forma",
+      "working": "Working...",
+      "sent": "Pro forma email sent",
+      "markPaid": "Mark as paid",
+      "markedPaid": "Billing request marked as paid",
+      "alreadyPaid": "Already paid",
+      "createInvoice": "Create invoice",
+      "hasInvoice": "Invoice created",
+      "invoiced": "Invoice generated"
+    }
+  },
+  "auth": {
+    "loginTitle": "Log in",
+    "loginSubtitle": "Access the client portal.",
+    "loginCta": "Log in",
+    "registerTitle": "Register",
+    "registerSubtitle": "Create a new client account.",
+    "registerCta": "Create account",
+    "email": "Email",
+    "password": "Password",
+    "name": "Name",
+    "namePlaceholder": "Full name",
+    "languagePreference": "Preferred language",
+    "languageHu": "Hungarian",
+    "languageEn": "English",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "login": "Log in",
+    "register": "Register",
+    "logout": "Log out",
+    "dashboardLink": "Dashboard",
+    "signedInAs": "Signed in as {name}",
+    "validationError": "Please check the fields.",
+    "unknownError": "An unknown error occurred.",
+    "registrationDisabledTitle": "Registration is disabled",
+    "registrationDisabledDescription": "Public sign-ups are currently turned off. Please contact an administrator if you need access to the portal.",
+    "backToLogin": "Back to login",
+    "forgotPassword": "Forgot password?",
+    "resetTitle": "Reset password",
+    "resetSubtitle": "Enter your email to receive a reset link.",
+    "resetCta": "Send reset link",
+    "resetEmailSent": "If the address exists, a reset link has been emailed.",
+    "resetConfirmTitle": "Choose a new password",
+    "resetConfirmSubtitle": "Set a new password to secure your account.",
+    "resetConfirmCta": "Update password",
+    "newPassword": "New password",
+    "resetSuccess": "Password updated. Redirecting to home..."
+  },
+  "common": {
+    "localeLabel": "Language",
+    "locale": {
+      "hu": "Hungarian",
+      "en": "English"
+    }
+  }
+}
